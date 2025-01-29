@@ -68,23 +68,80 @@ const Card = () => {
   const series_name = "the_stressful_story";
   const rating = "9";
   const summary = "this story is so boring means it like a depressed things and so on i dont know why we watch this";
-  return (
-    <div>
+  const returnGenre = () => {
+    const genre = "RomCom"
+    return genre;
+  }
+
+  const functionCall = () => {
+    const vari = "mithu mithu tota";
+    return vari;
+  }
+  const age = 9;
+
+  if(age < 18 ){
+    return (
       <div>
-        <img
-          /*style={ {width : "200px", height: "200px"}}*/ width="100px"
-          height="100px"
-          src="ticket-2974645_1280.jpg"
-          alt=""
-        />
+        <div>
+          <img
+            /*style={ {width : "200px", height: "200px"}}*/ width="100px"
+            height="100px"
+            src="ticket-2974645_1280.jpg"
+            alt=""
+          />
+        </div>
+        <h2>Series name : {series_name}</h2>
+        <h3>Rating : {5+3+8.1}</h3>
+        <p>
+          summary : {summary}
+        </p>
+        <p>
+          genre : {returnGenre()}
+         
+        </p>
+        <p>
+        tota : {functionCall()}
+        </p>
+         
+        <p>{age >= 18 ? "major" : "minor"}</p>
+        <p>{age>=18 && "you can vote"}</p>
+        <button>content is not for you </button>
       </div>
-      <h2>Series name : {series_name}</h2>
-      <h3>Rating : {5+3+8.1}</h3>
-      <p>
-        summary : {summary}
-      </p>
-    </div>
-  );
+    );
+  }
+
+  else {
+
+    return (
+      <div>
+        <div>
+          <img
+            /*style={ {width : "200px", height: "200px"}}*/ width="100px"
+            height="100px"
+            src="ticket-2974645_1280.jpg"
+            alt=""
+          />
+        </div>
+        <h2>Series name : {series_name}</h2>
+        <h3>Rating : {5+3+8.1}</h3>
+        <p>
+          summary : {summary}
+        </p>
+        <p>
+          genre : {returnGenre()}
+         
+        </p>
+        <p>
+        tota : {functionCall()}
+        </p>
+         
+        <p>{age >= 18 ? "major" : "minor"}</p>
+        <p>{age>=18 && "you can vote"}</p>
+        <button>content for you </button>
+      </div>
+    );
+  }
+  
 };
 
 export default App;
@@ -106,6 +163,17 @@ export default App;
 // return <div> the result is : {1+2+3} </div>
 
 // so first we seen the variable which declare dynamically and then we use as a props and we also do operatoins in curly braces like plus minus and so on 
+
+// conditional rendering in jsx : 
+
+// we can either reutnr a jsx early or you can use ternary operators for conditionals in jsx.
+
+// return <p> {age >= 18 ? "major" : "minor"}</p>
+
+// return <p> {age > = 18 && "you can vote "}</p>
+
+// return <p> {username || "Guest"}</p>
+
 
 
 
