@@ -65,6 +65,9 @@ function App() {
 }
 
 const Card = () => {
+  const series_name = "the_stressful_story";
+  const rating = "9";
+  const summary = "this story is so boring means it like a depressed things and so on i dont know why we watch this";
   return (
     <div>
       <div>
@@ -75,11 +78,10 @@ const Card = () => {
           alt=""
         />
       </div>
-      <h2>Series name : the_depressed_story</h2>
-      <h3>Rating : 8</h3>
+      <h2>Series name : {series_name}</h2>
+      <h3>Rating : {5+3+8.1}</h3>
       <p>
-        summary : now we write our react.createElement code into console.log
-        okay to check react dom or virtual dom thing
+        summary : {summary}
       </p>
     </div>
   );
@@ -88,3 +90,22 @@ const Card = () => {
 export default App;
 
 // aaj ke liye itna hi
+
+
+// dynamic values in jsx : 
+
+// we can add any variables of our component in jsx using {} syntax.
+
+// function MyComponent(){
+// const value = "hello";
+// return <p>{value}</p>;
+// }
+
+// jsx allows you to write js expressions inside curly brace includes operations, function calls , js expressions produce a value.
+
+// return <div> the result is : {1+2+3} </div>
+
+// so first we seen the variable which declare dynamically and then we use as a props and we also do operatoins in curly braces like plus minus and so on 
+
+
+
