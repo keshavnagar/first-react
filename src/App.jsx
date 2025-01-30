@@ -39,10 +39,10 @@ function App() {
     //  [<Card key="1"/>,<Card key="2"/>,<Card key="3"/>,<Card key="4"/>]
 
     <React.Fragment>
-      <Card/>
-      <Card/>
-     
-      <Card/>
+      <Card />
+      <Card />
+
+      <Card />
     </React.Fragment>
     // yaha par jo hamne ek div banaya hai iske andar bahut sara content likha means ye ek hamne ek card bana diya okay , ab hamen aise 5 cards banane ho to ham kya karenge inhe copy paste karnege 5 times but uski jagah ham iska ek component bana dete hai and usko ham 5 bar yaha likh dete hai to vo chij achi hogi rahter than iske okay.
 
@@ -59,97 +59,97 @@ function App() {
 
     // to ise ham kahte hai array ki help se hamene vo extra div eliminate kar diya but this way is also a hactic way so we use react.fragment way so please look that
 
-    // so react framgment is aloso a good way to write these things 
-    
+    // so react framgment is aloso a good way to write these things
   );
 }
 
 const Card = () => {
   const series_name = "the_stressful_story";
   const rating = "9";
-  const summary = "this story is so boring means it like a depressed things and so on i dont know why we watch this";
+  const summary =
+    "this story is so boring means it like a depressed things and so on i dont know why we watch this";
   const returnGenre = () => {
-    const genre = "RomCom"
+    const genre = "RomCom";
     return genre;
-  }
+  };
 
   const functionCall = () => {
     const vari = "mithu mithu tota";
     return vari;
-  }
-  const age = 9;
+  };
+  // const age = 90;
+  // const canWatch = "watch please";
+  // if(age<18) canWatch = "not for you"
 
-  if(age < 18 ){
-    return (
+  const canWatch = () => {
+    if(age>=18) "watch this "
+    return "do no watch this"
+  }
+
+  // if(age < 18 ){
+  return (
+    <div>
       <div>
-        <div>
-          <img
-            /*style={ {width : "200px", height: "200px"}}*/ width="100px"
-            height="100px"
-            src="ticket-2974645_1280.jpg"
-            alt=""
-          />
-        </div>
-        <h2>Series name : {series_name}</h2>
-        <h3>Rating : {5+3+8.1}</h3>
-        <p>
-          summary : {summary}
-        </p>
-        <p>
-          genre : {returnGenre()}
-         
-        </p>
-        <p>
-        tota : {functionCall()}
-        </p>
-         
-        <p>{age >= 18 ? "major" : "minor"}</p>
-        <p>{age>=18 && "you can vote"}</p>
-        <button>content is not for you </button>
+        <img
+          /*style={ {width : "200px", height: "200px"}}*/ width="100px"
+          height="100px"
+          src="ticket-2974645_1280.jpg"
+          alt=""
+        />
       </div>
-    );
-  }
+      <h2>Series name : {series_name}</h2>
+      <h3>Rating : {5 + 3 + 8.1}</h3>
+      <p>summary : {summary}</p>
+      <p>genre : {returnGenre()}</p>
+      <p>tota : {functionCall()}</p>
 
-  else {
+      <p>{age >= 18 ? "major" : "minor"}</p>
+      <p>{age >= 18 && "you can vote"}</p>
+      {/* <button>{age>=18 ? "watch" : "not for you"} </button> */}
+      {/* <button>{canWatch}</button> */}
+      <button>{canWatch()}</button>
+    </div>
+  );
+  // }
 
-    return (
-      <div>
-        <div>
-          <img
-            /*style={ {width : "200px", height: "200px"}}*/ width="100px"
-            height="100px"
-            src="ticket-2974645_1280.jpg"
-            alt=""
-          />
-        </div>
-        <h2>Series name : {series_name}</h2>
-        <h3>Rating : {5+3+8.1}</h3>
-        <p>
-          summary : {summary}
-        </p>
-        <p>
-          genre : {returnGenre()}
-         
-        </p>
-        <p>
-        tota : {functionCall()}
-        </p>
-         
-        <p>{age >= 18 ? "major" : "minor"}</p>
-        <p>{age>=18 && "you can vote"}</p>
-        <button>content for you </button>
-      </div>
-    );
-  }
-  
+  // else {
+
+  //   return (
+  //     <div>
+  //       <div>
+  //         <img
+  //           /*style={ {width : "200px", height: "200px"}}*/ width="100px"
+  //           height="100px"
+  //           src="ticket-2974645_1280.jpg"
+  //           alt=""
+  //         />
+  //       </div>
+  //       <h2>Series name : {series_name}</h2>
+  //       <h3>Rating : {5+3+8.1}</h3>
+  //       <p>
+  //         summary : {summary}
+  //       </p>
+  //       <p>
+  //         genre : {returnGenre()}
+
+  //       </p>
+  //       <p>
+  //       tota : {functionCall()}
+  //       </p>
+
+  //       <p>{age >= 18 ? "major" : "minor"}</p>
+  //       <p>{age>=18 && "you can vote"}</p>
+  //       <button>content for you </button>
+  //     </div>
+  //   );
+  // } yaha par mene else wali condition ko comment kar diya hai
 };
 
 export default App;
 
 // aaj ke liye itna hi
 
-
-// dynamic values in jsx : 
+// dynamic values in jsx :
 
 // we can add any variables of our component in jsx using {} syntax.
 
@@ -162,9 +162,9 @@ export default App;
 
 // return <div> the result is : {1+2+3} </div>
 
-// so first we seen the variable which declare dynamically and then we use as a props and we also do operatoins in curly braces like plus minus and so on 
+// so first we seen the variable which declare dynamically and then we use as a props and we also do operatoins in curly braces like plus minus and so on
 
-// conditional rendering in jsx : 
+// conditional rendering in jsx :
 
 // we can either reutnr a jsx early or you can use ternary operators for conditionals in jsx.
 
@@ -174,6 +174,10 @@ export default App;
 
 // return <p> {username || "Guest"}</p>
 
+// ab dekho jo mene upar lines me conditions etc likhi hai ternary operator ke sath iska use karke jo mene code do bar likha tha use me reduec kar sakta hu only ek bar me kaise vo appan karke dekhte hai
 
+// ek aur tarika hai apan kya kar sakte hai ki jo variable decalare karte hai na vahi par apan ek thing karte hai ki vo apko upar dikhega 
 
+// means apan code ko aur clean kar sakte hai 
 
+// apan function ka use karket bhi vo kam kar sakte hai 
