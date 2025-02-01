@@ -1,50 +1,21 @@
- const Card = () => {
-    const series_name = "the_stressful_story";
-    const rating = "9";
-    const summary =
-      "this story is so boring means it like a depressed things and so on i dont know why we watch this";
-    return (
+import seriesData from "../api/seriesData.json";
+const Card = () => {
+  return (
+    <div>
       <div>
-        <div>
-          <img
-             width="100px"
-            height="100px"
-            src="ticket-2974645_1280.jpg"
-            alt=""
-          />
-        </div>
-        <h2>Series name : {series_name}</h2>
-        <h3>Rating : {rating}</h3>
-        <p>summary : {summary}</p>
-
+        <img
+          width="100px"
+          height="100px"
+          src={seriesData[0].img_url}
+          alt=""
+        />
       </div>
-    );
-  };
-
-  export default Card; 
-
-  export const Footer = () =>{
-    return(
-
-        <>
-        <div>
-            copyright @keshav
-        </div>
-        </>
-
-    )
-    
-  }
-
-
-  export const Header = () =>{
-    return(
-
-        <>
-        <div>
-            Homepage
-        </div>
-        </>
-
-    )
-}
+      <h2>Series name : {seriesData[0].name}</h2>
+      <h3>Rating : {seriesData[0].rating}</h3>
+      <p>summary : {seriesData[0].description}</p>
+      <h2>Cast : {seriesData[0].cast}</h2>
+      <h2>Genre : {seriesData[0].genre}</h2>
+    </div>
+  );
+};
+export default Card;
