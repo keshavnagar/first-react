@@ -1,21 +1,30 @@
 import seriesData from "../api/seriesData.json";
 const Card = () => {
   return (
-    <div>
-      <div>
-        <img
-          width="100px"
-          height="100px"
-          src={seriesData[0].img_url}
-          alt=""
-        />
-      </div>
-      <h2>Series name : {seriesData[0].name}</h2>
-      <h3>Rating : {seriesData[0].rating}</h3>
-      <p>summary : {seriesData[0].description}</p>
-      <h2>Cast : {seriesData[0].cast}</h2>
-      <h2>Genre : {seriesData[0].genre}</h2>
-    </div>
+    <ul>
+      {seriesData.map((curEle) => {
+        return (
+          <li key={curEle.id}>
+            <div>
+              <img
+                width="100px"
+                height="100px"
+                src={curEle.img_url}
+                alt=""
+              />
+            </div>
+            <h2>Series name : {curEle.name}</h2>
+            <h3>Rating : {curEle.rating}</h3>
+            <p>summary : {curEle.description}</p>
+            <h2>Cast : {curEle.cast}</h2>
+            <h2>Genre : {curEle.genre}</h2>
+            <a href={curEle.watch_url} target="_blank">
+              <button>Watch now</button>
+            </a>
+          </li>
+        );
+      })}
+    </ul>
   );
 };
 export default Card;
