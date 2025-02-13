@@ -1,16 +1,16 @@
 
-const SeriesCard = ({ curEl }) => {
+const SeriesCard = (props) => {
   return (
-    <li key={curEl.id}>
+    <li key={props.curEl.id}>
       <div>
-        <img width="101px" height="101px" src={curEl.img_url} alt="" />
+        <img width="101px" height="101px" src={props.curEl.img_url} alt="" />
       </div>
-      <h2>Series name : {curEl.name}</h2>
-      <h3>Rating : {curEl.rating}</h3>
-      <p>Summary : {curEl.description}</p>
-      <h2>Cast : {curEl.cast}</h2>
-      <h2>Genre : {curEl.genre}</h2>
-      <a href={curEl.watch_url} target="_blank">
+      <h2>Series name : {props.curEl.name}</h2>
+      <h3>Rating : {props.curEl.rating}</h3>
+      <p>Summary : {props.curEl.description}</p>
+      <h2>Cast : {props.curEl.cast}</h2>
+      <h2>Genre : {props.curEl.genre}</h2>
+      <a href={props.curEl.watch_url} target="_blank">
         <button>watch now</button>
       </a>
     </li>
