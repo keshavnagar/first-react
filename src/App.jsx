@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import Card  from "./cmoponents/Card";
 console.log(React.createElement("h1", null, "hello world"));
-function App() {
+const App = () => {
   return (
     <React.Fragment>
       <Card />

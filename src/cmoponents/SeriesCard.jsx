@@ -1,9 +1,13 @@
-
 const SeriesCard = (props) => {
   return (
-    <li key={props.curEl.id}>
+    <li key={props.key}>
       <div>
-        <img width="101px" height="101px" src={props.curEl.img_url} alt="" />
+        <img
+          width="101px"
+          height="101px"
+          src={props.curEl.img_url}
+          alt={props.curEl.name}
+        />
       </div>
       <h2>Series name : {props.curEl.name}</h2>
       <h3>Rating : {props.curEl.rating}</h3>
