@@ -1,4 +1,5 @@
 const SeriesCard = (props) => {
+  console.log(props)
   return (
     <li key={props.key}>
       <div>
