@@ -52,3 +52,12 @@ dekh keshav ek problem hai ki jab bhi mujhe kuch likhna hai vo me image se utar 
 iske liye me ek folder banayunga okay jaise abhi jo likhana hai mujhe me ek screen shot lera hu taki kuch relate karega to me us screenshot pe jayunga okay : 
 
 and then fir se start kaunga pahdna to uske liye eka aur folder banara hu isee project ke andar 
+
+dkeho ye jo props hai 
+
+vo parents component to child components me data ko send karne ke liye kam ata hai 
+
+and unidireactionally hota hai means data only parent componnet se child component ki or jata hai na ki ulta 
+
+means vice versa ka khel nahi hai yaha par 
+

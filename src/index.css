@@ -1,0 +1,8 @@
+.grid {
+    display: grid;
+    gap: 9.5rem 
+}
+
+.grid-three-cols{
+    grid-template-columns: repeat(3,1fr);
+}
