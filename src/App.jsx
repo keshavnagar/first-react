@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import "./cmoponents/Card.css"
 import Card from "./cmoponents/Card";
 // import ProfileCard from "./cmoponents/ProfileCard";
 // import Profile  from "./cmoponents/Profile";
