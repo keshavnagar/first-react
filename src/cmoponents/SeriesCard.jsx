@@ -2,10 +2,17 @@ const SeriesCard = ({
   curEl: { key, img_url, name, rating, description, cast, genre, watch_url },
 }) => {
   return (
-      <li className="particular-card" key={key}>
-        <div>
-          <img className="equalImage" width="101px" height="101px" src={img_url} alt={name} />
-        </div>
+    <li className="particular-card" key={key}>
+      <div>
+        <img
+          className="equalImage"
+          width="101px"
+          height="101px"
+          src={img_url}
+          alt={name}
+        />
+      </div>
+      <div className="card-content">
         <h2>Series name : {name}</h2>
         <h3>Rating : {rating}</h3>
         <p>Summary : {description}</p>
@@ -14,10 +21,9 @@ const SeriesCard = ({
         <a href={watch_url} target="_blank">
           <button>watch now</button>
         </a>
-      </li>
-  
+      </div>
+    </li>
   );
 };
 
 export default SeriesCard;
-
